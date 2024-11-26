@@ -1,0 +1,71 @@
+<!-- ############################# -->
+<!-- # Device Overview Dashboard # -->
+<!-- ############################# -->
+<div
+  style="max-width: 600px; margin: 0 auto; text-align: center; background: linear-gradient(#333, #111); padding: 30px; padding-bottom: 120px;">
+  
+  <!-- ############################### -->
+  <!-- # Header Section: Title/Count # -->
+  <!-- ############################### -->
+  <div style="height: 90px;">
+    <!-- Left-aligned Title -->
+    <div style="width: 50%; float: left;">
+      <h2 style="color: #ccb87a; text-align: left; padding-left: 20px;">Dashboard Name</h2>
+    </div>
+    <!-- Right-aligned Device Count -->
+    <div style="width: 50%; float: right;">
+      <h2 style="color: #ccb87a;">Devices</h2>
+      <p style="color: #fff; font-size: 28px; line-height: 0px;">{{total_devices}}</p>
+    </div>
+  </div>
+
+  <!-- ######################## -->
+  <!-- # Status Information # -->
+  <!-- ######################## -->
+  <div style="padding: 20px 10px; text-align: left; color: #fff; line-height: 0px;">
+    <p style="font-size: 22px;">Status:</p>
+    <!-- Dynamic Report Time -->
+    <p style="line-height: 0px; color: #e2e2e2; font-size: 15px;">
+      <span style="font-size: 14px;">&#x1F551;</span> Last report at {{formatted_time}}
+    </p>
+  </div>
+
+  <!-- ############################# -->
+  <!-- # Key Metrics Display Grid # -->
+  <!-- ############################# -->
+  <div style="display: flex; justify-content: space-around; margin: 20px 0;">
+    <!-- Leak Detection Status -->
+    <div style="flex-basis: 20%; text-align: center;">
+      Leak Detection 
+      <p style="color: {{leaking_color}};">{{leaking_status}}</p>
+    </div>
+    <!-- Humidity Levels -->
+    <div style="flex-basis: 20%; text-align: center;">
+      Humidity
+      <p style="color: {{humidity_color}};">{{humidity_value}} %</p>
+    </div>
+    <!-- Temperature Levels -->
+    <div style="flex-basis: 20%; text-align: center;">
+      Temperature
+      <p style="color: {{temperature_color}};">{{temperature_value}} °F</p>
+    </div>
+    <!-- Tamper Status -->
+    <div style="flex-basis: 20%; text-align: center;">
+      Tamper 
+      <p style="color: {{tamper_color}};">{{tamper_status}}</p>
+    </div>
+  </div>
+
+  <!-- ############################## -->
+  <!-- # Call-to-Action: View Link # -->
+  <!-- ############################## -->
+  <div style="padding-top: 20px; text-align: center;">
+    <div>
+      <!-- Replace sensitive URL with a placeholder -->
+      <a href="https://dashboard.example.com/device-overview" class="button"
+        style="background-color: #a47a2b; width: 130px; border: none; padding: 15px; margin: 10px; border-radius: 5px; color: white; font-size: 17px;">
+        View Devices
+      </a>
+    </div>
+  </div>
+</div>

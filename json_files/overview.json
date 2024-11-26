@@ -1,0 +1,163 @@
+{
+    "annotations": {
+      "list": [
+        {
+          // Annotations section: Configures how annotations appear in the dashboard
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Hidden --" // UID hidden for privacy
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true, // Indicates if the dashboard is editable
+    "fiscalYearStartMonth": 0, // Default fiscal year start month
+    "graphTooltip": 0,
+    "id": 48, // Dashboard ID
+    "links": [],
+    "panels": [
+      {
+        // Panel 1: Summary for Oris Office
+        "datasource": {
+          "type": "mysql",
+          "uid": "xxxxxxx" // Obfuscated UID for datasource
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 14,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        },
+        "id": 4, // Panel ID
+        "options": {
+          // Content block for dynamic HTML rendering in the panel
+          "content": "<div style='background: linear-gradient(#635d5d, #262425);'>Dynamic content hidden for brevity</div>",
+          "defaultContent": "The query didn't return any results.",
+          "editor": {
+            "format": "auto",
+            "language": "html"
+          },
+          "externalScripts": [],
+          "externalStyles": [],
+          "renderMode": "everyRow",
+          "wrap": true
+        },
+        "pluginVersion": "4.5.0",
+        "targets": [
+          {
+            // SQL Query to fetch data for the panel
+            "dataset": "arkiq",
+            "datasource": {
+              "type": "mysql",
+              "uid": "xxxxxxx" // Obfuscated UID for datasource
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT ...", // Query hidden for brevity
+            "refId": "A",
+            "sql": {
+              "columns": [],
+              "groupBy": [],
+              "limit": 50
+            },
+            "table": "browan_water_leak_data"
+          }
+        ],
+        "title": "Oris Office Summary",
+        "type": "marcusolsson-dynamictext-panel"
+      },
+      {
+        // Panel 2: Summary for Last Floor
+        "datasource": {
+          "type": "mysql",
+          "uid": "xxxxxxx" // Obfuscated UID for datasource
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 14,
+          "w": 12,
+          "x": 12,
+          "y": 0
+        },
+        "id": 6, // Panel ID
+        "options": {
+          "content": "<div style='background: linear-gradient(#635d5d, #262425);'>Dynamic content hidden for brevity</div>",
+          "defaultContent": "The query didn't return any results.",
+          "editor": {
+            "format": "auto",
+            "language": "html"
+          },
+          "externalScripts": [],
+          "externalStyles": [],
+          "renderMode": "everyRow",
+          "wrap": true
+        },
+        "pluginVersion": "4.5.0",
+        "targets": [
+          {
+            "dataset": "arkiq",
+            "datasource": {
+              "type": "mysql",
+              "uid": "xxxxxxx" // Obfuscated UID for datasource
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT ...", // Query hidden for brevity
+            "refId": "B",
+            "sql": {
+              "columns": [],
+              "groupBy": [],
+              "limit": 50
+            },
+            "table": "browan_water_leak_data"
+          }
+        ],
+        "title": "Last Floor Summary",
+        "type": "marcusolsson-dynamictext-panel"
+      }
+    ]
+  }
+  
